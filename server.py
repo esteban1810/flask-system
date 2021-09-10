@@ -5,6 +5,7 @@ usuarios = []
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def root():
     return redirect('/login')
@@ -15,10 +16,13 @@ def login():
 
 @app.route('/loguearse',methods=['POST'])
 def loguearse():
+    correo = request.form['correo']
+    contrasenia = request.form['contrasenia']
     for usuario in usuarios:
-        if usuario.correo = correo:
-            if usuario.contrasenia = contrasenia:
+        if usuario.getContrasenia() == contrasenia:
+            if usuario.getCorreo() == correo:
                 return redirect('/home')
+    return redirect('/login')
 
 
 @app.route('/home')
@@ -34,12 +38,13 @@ def procesa():
     nombre = request.form['nombre']
     apellidos = request.form['apellidos']
     genero = request.form['genero']
+    tipo = request.form['tipo']
     cedula = request.form['cedula']
     correo = request.form['correo']
     contrasenia = request.form['contrasenia']
-    usuario = Usuario(nombre,apellidos,genero,cedula,correo,contrasenia)
+    usuario = Usuario(nombre,apellidos,genero,tipo,cedula,correo,contrasenia)
     usuarios.append(usuario)
-    return bucleFor()
+    return redirect('/home')
 
 def bucleFor():
     cadena = ""
