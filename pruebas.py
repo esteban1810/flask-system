@@ -2,6 +2,7 @@ from usuario import Usuario
 
 usuarios = []
 print(len(usuarios))
-usuario = Usuario("nombre","apellidos","genero","cedula","correo","contrasenia")
+usuario = Usuario("nombre")
 usuarios.append(usuario)
 print(len(usuarios))
+print(usuario)
