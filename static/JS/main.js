@@ -12,7 +12,7 @@ function ocultarCedula(){
     }
 }
 
-
+//
 function validarPassword(){
     if(document.getElementById('confPass').value != document.getElementById('pass').value){
         alert("Las contraseñas no coinciden");
