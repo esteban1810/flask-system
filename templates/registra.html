@@ -5,82 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página De Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <form action="/procesa" method="post">
-        <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre">
+    <div class="card">
+        <div class="icon">
+            <img src="{{ url_for('static', filename='img/adduser_añadir_3553.png') }}" alt="">
         </div>
-
-        <div>
-            <label for="apellidos">Apellidos</label>
-            <input type="text" name="apellidos">
-        </div>
-
-        <div>
-            <label for="genero">Genero</label>
-            <input type="radio" name="genero" value="masculino"><label for="masculino">Masculino</label>
-            <input type="radio" name="genero" value="femenino"><label for="femenino">Femenino</label>
-        </div>
-
-        <div>
-            <label for="tipo">Tipo</label>
-            <input type="radio" name="tipo" value="1"><label for="masculino">Administrador</label>
-            <input type="radio" name="tipo" value="2"><label for="femenino">Médico</label>
-        </div>
-
-        <div>
-            <label for="cedula">Cédula</label>
-            <input type="text" name="cedula">
-        </div>
-
-        <div>
-            <label for="correo">Correo</label>
-            <input type="email" name="correo">
-        </div>
-
-        <div>
-            <label for="contrasenia">Contraseña</label>
-            <input type="password" name="contrasenia">
-        </div>
-
-        <div>
-            <label for="contrasenia2">Confirmar Contraseña</label>
-            <input type="password" name="contrasenia2">
-        </div>
-        <input type="submit" value="Enviar">
-    </form>
-    <!--
-    <form name="forma01" action="/procesa" method="post">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="2">Completa la siguiente información</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Código del estudiante</td>
-                    <td><input type="text" name="codigo" id="codigo"></td>
-                </tr>
-
-                <tr>
-                    <td>Nombre del estudiante</td>
-                    <td><input type="text" name="nombre" id="nombre"></td>
-                </tr>
-
-                <tr>
-                    <td>Apellidos del estudiante</td>
-                    <td><input type="text" name="apellidos" id="apellidos"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Registrar"></td>
-                </tr>
-                
-            </tbody>
-        </table>
-    </form>
-    -->
+        <form action="/procesa" method="post">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" required>
+            </div>
+            <br>
+            <div>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" required>
+            </div>
+            <br>
+            <div>
+                <label for="genero">Genero</label>
+                <input type="radio" name="genero" value="masculino"><label for="masculino">Masculino</label>
+                <input type="radio" name="genero" value="femenino"><label for="femenino">Femenino</label>
+            </div>
+            <br>
+            <div>
+                <label for="tipo">Tipo</label>
+                <input type="radio" name="tipo" value="1" id="administrador" onclick="ocultarCedula()"><label for="masculino">Administrador</label>
+                <input type="radio" name="tipo" value="2" id="medico" onclick="mostrarCedula()"><label for="femenino">Médico</label>
+            </div>
+            <br>
+            <div id="cedula">
+                <label for="cedula">Cédula</label>
+                <input type="text" name="cedula">
+            </div>
+            <br>
+            <div>
+                <label for="correo">Correo</label>
+                <input type="email" name="correo" required>
+            </div>
+            <br>
+            <div>
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" name="contrasenia" id="pass" required>
+            </div>
+            <br>
+            <div>
+                <label for="contrasenia2">Confirmar Contraseña</label>
+                <input type="password" name="contrasenia2" id="confPass" required>
+            </div>
+            <input type="submit" value="Enviar" class="registro__buton" onclick=" return validarPassword()">
+        </form>
+        <!--
+        <form name="forma01" action="/procesa" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Completa la siguiente información</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Código del estudiante</td>
+                        <td><input type="text" name="codigo" id="codigo"></td>
+                    </tr>
+    
+                    <tr>
+                        <td>Nombre del estudiante</td>
+                        <td><input type="text" name="nombre" id="nombre"></td>
+                    </tr>
+    
+                    <tr>
+                        <td>Apellidos del estudiante</td>
+                        <td><input type="text" name="apellidos" id="apellidos"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Registrar"></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </form>
+        -->
+    </div>
+    <script src="{{ url_for('static', filename='JS/main.js') }}"></script>
 </body>
 </html>

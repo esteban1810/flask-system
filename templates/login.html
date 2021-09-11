@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
+
 <body>
-    <h1>Login</h1>
-    <form action="/loguearse" method="post">
-        <div>
-            <label for="correo">Correo:</label><br>
-            <input type="email" name="correo" id="correo">
+    <div class="login__card">
+        <div class="icon">
+            <img src="{{ url_for('static', filename='img/user_84308.png') }}" alt="">
         </div>
-        <div>
-            <label for="contrasenia">Contraseña:</label><br>
-            <input type="password" name="contrasenia" id="contrasenia">
-        </div>
-        <input type="submit" value="Loguearse">
-    </form>
-    <a href="/registra">registrarse</a>
+        <form action="/loguearse" method="post">
+            <div class="login__correo">
+                <label for="correo">Correo</label><br>
+                <input type="email" name="correo" id="correo">
+            </div>
+            <br>
+            <div>
+                <label for="contrasenia">Contraseña</label><br>
+                <input type="password" name="contrasenia" id="contrasenia">
+            </div>
+            <input type="submit" value="Inicar" class="login__buton">
+        </form>
+        <a href="/registra">registrarse</a>
+    </div>
 </body>
+
 </html>
