@@ -2,7 +2,7 @@ body {
     background: linear-gradient(90deg, rgb(5, 5, 252), rgb(178, 162, 250));
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/**/
 .login__card, 
 .card {
     height: 350px;
