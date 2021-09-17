@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from usuario import Usuario
+from db import conectar
 
 usuarios = []
 
@@ -9,6 +10,17 @@ app = Flask(__name__)
 @app.route('/')
 def root():
     return redirect('/login')
+
+@app.route('/listado')
+def listado():
+    return conectar()
+    """
+    if conexion == None:
+        return "<p>Error de conexion...</p>"
+    else:
+        listado = getListadoPersonas(conexion)
+        return render_template("listado.html",listado=listado)
+        """
 
 @app.route('/login')
 def login():
