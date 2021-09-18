@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from usuario import Usuario
-from db import conectar
+from db import conectar, getListadoPersonas, guardarUsuario
 
 usuarios = []
 
@@ -56,8 +56,8 @@ def procesa():
     cedula = request.form['cedula']
     correo = request.form['correo']
     contrasenia = request.form['contrasenia']
-    usuario = Usuario(nombre,apellidos,genero,tipo,cedula,correo,contrasenia)
-    usuarios.append(usuario)
+    conexion = conectar()
+    guardarUsuario(conexion,nombre,apellidos,genero,tipo,cedula,correo,contrasenia)
     return redirect('/home')
 
 def bucleFor():
