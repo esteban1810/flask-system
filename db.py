@@ -23,13 +23,21 @@ def getListadoPersonas(conexion):
     conexion.close()
     return filas
 
-def getListadoPersonas(conexion):
+def getListadoEnfermedades(conexion):
     cursor = conexion.cursor()
-    cursor.execute("SELECT correo,contrasenia FROM usuarios")
+    cursor.execute("SELECT * FROM enfermedades")
     filas = cursor.fetchall()
     cursor.close()
     conexion.close()
     return filas
+
+# def getListadoPersonas(conexion):
+#     cursor = conexion.cursor()
+#     cursor.execute("SELECT correo,contrasenia FROM usuarios")
+#     filas = cursor.fetchall()
+#     cursor.close()
+#     conexion.close()
+#     return filas
 
 
 def guardarUsuario(conexion,nombre,apellidos,genero,tipo,cedula,correo,contrasenia):

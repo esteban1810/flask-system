@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from usuario import Usuario
-from db import conectar, getListadoPersonas, guardarUsuario
+from db import conectar, getListadoPersonas, guardarUsuario, getListadoEnfermedades
 
 usuarios = []
 
@@ -59,6 +59,15 @@ def procesa():
     conexion = conectar()
     guardarUsuario(conexion,nombre,apellidos,genero,tipo,cedula,correo,contrasenia)
     return redirect('/home')
+
+@app.route('/enfermadades')
+def enfermadades():
+    conexion = conectar()
+    if conexion == None:
+        return "<p>Error de conexion...</p>"
+    else:
+        enfermadades = getListadoEnfermedades(conexion)
+        return render_template("enfermedades.html",enfermadades=enfermadades)
 
 def bucleFor():
     cadena = ""
