@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfermedades</title>
+</head>
+<body>
+    <h1>ENFERMEDADES</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>EDAD</th>
+                <th>SEXO</th>
+                <th>PESO</th>
+                <th>TALLA</th>
+                <th>SEDENTARIO</th>
+                <th>INSTRUCCION</th>
+                <th>TAS</th>
+                <th>TAD</th>
+                <th>HTA_CONOCIDA</th>
+                <th>HTA_OMS</th>
+                <th>A_DIAB</th>
+                <th>ECV_B</th>
+                <th>TABACO</th>
+                <th>ALCOHOL</th>
+                <th>STATIN</th>
+                <th>CINTURA</th>
+                <th>CADERA</th>
+                <th>OBCENT_ATP</th>
+                <th>COLESTEROL</th>
+                <th>HDL</th>
+                <th>LDL</th>
+                <th>LDL_C</th>
+                <th>TG</th>
+                <th>CNOHDL</th>
+                <th>APOA</th>
+                <th>APOB</th>
+                <th>LPA</th>
+                <th>A1C</th>
+                <th>HBA1</th>
+                <th>CREATININA</th>
+                <th>GLUCB</th>
+                <th>SOG</th>
+                <th>TOL_GLUCOSA</th>
+                <th>DM</th>
+                <th>CONOCIDA</th>
+                <th>SM</th>
+                <th>PCR</th>
+                <th>INSULINEMIA</th>
+                <th>PAI_1</th>
+                <th>FVW</th>
+                <th>FIBRI</th>
+                <th>HMC</th>
+                <th>HOMA</th>
+                <th>IR</th>
+                <th>ECNOS</th>
+                <th>PPR</th>
+                <th>FIBRATOS</th>
+                <th>CETP</th>
+                <th>PON_192</th>
+                <th>HTA_IDF</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for enfermedad in enfermadades %}
+                <tr>
+                    <td>{{ enfermedad[0] }}</td>
+                    <td>{{ enfermedad[1] }}</td>
+                    <td>{{ enfermedad[2] }}</td>
+                    <td>{{ enfermedad[3] }}</td>
+                    <td>{{ enfermedad[4] }}</td>
+                    <td>{{ enfermedad[5] }}</td>
+                    <td>{{ enfermedad[6] }}</td>
+                    <td>{{ enfermedad[7] }}</td>
+                    <td>{{ enfermedad[8] }}</td>
+                    <td>{{ enfermedad[9] }}</td>
+                    <td>{{ enfermedad[10] }}</td>
+                    <td>{{ enfermedad[11] }}</td>
+                    <td>{{ enfermedad[12] }}</td>
+                    <td>{{ enfermedad[13] }}</td>
+                    <td>{{ enfermedad[14] }}</td>
+                    <td>{{ enfermedad[15] }}</td>
+                    <td>{{ enfermedad[16] }}</td>
+                    <td>{{ enfermedad[17] }}</td>
+                    <td>{{ enfermedad[18] }}</td>
+                    <td>{{ enfermedad[19] }}</td>
+                    <td>{{ enfermedad[20] }}</td>
+                    <td>{{ enfermedad[21] }}</td>
+                    <td>{{ enfermedad[22] }}</td>
+                    <td>{{ enfermedad[23] }}</td>
+                    <td>{{ enfermedad[24] }}</td>
+                    <td>{{ enfermedad[25] }}</td>
+                    <td>{{ enfermedad[26] }}</td>
+                    <td>{{ enfermedad[27] }}</td>
+                    <td>{{ enfermedad[28] }}</td>
+                    <td>{{ enfermedad[29] }}</td>
+                    <td>{{ enfermedad[30] }}</td>
+                    <td>{{ enfermedad[31] }}</td>
+                    <td>{{ enfermedad[32] }}</td>
+                    <td>{{ enfermedad[33] }}</td>
+                    <td>{{ enfermedad[34] }}</td>
+                    <td>{{ enfermedad[35] }}</td>
+                    <td>{{ enfermedad[36] }}</td>
+                    <td>{{ enfermedad[37] }}</td>
+                    <td>{{ enfermedad[38] }}</td>
+                    <td>{{ enfermedad[39] }}</td>
+                    <td>{{ enfermedad[40] }}</td>
+                    <td>{{ enfermedad[41] }}</td>
+                    <td>{{ enfermedad[42] }}</td>
+                    <td>{{ enfermedad[43] }}</td>
+                    <td>{{ enfermedad[44] }}</td>
+                    <td>{{ enfermedad[45] }}</td>
+                    <td>{{ enfermedad[46] }}</td>
+                    <td>{{ enfermedad[47] }}</td>
+                    <td>{{ enfermedad[48] }}</td>
+                    <td>{{ enfermedad[49] }}</td>
+                    <td>{{ enfermedad[50] }}</td>
+                    <td>{{ enfermedad[51] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
