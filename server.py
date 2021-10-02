@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 user = None
 
-
 @app.route('/')
 def root():
     return redirect('/login')
@@ -45,7 +44,7 @@ def loguearse():
 def home():
     global user
     if(user != None):
-        return render_template('home.html')
+        return render_template('home.html',tipo=user[6])
     return render_template('login.html')
         
 
@@ -71,8 +70,8 @@ def procesa():
     guardarUsuario(conexion,correo,nombre,apellidos,genero,cedula,contrasenia,tipo)
     return redirect('/home')
 
-@app.route('/enfermadades')
-def enfermadades():
+@app.route('/enfermedades')
+def enfermedades():
     global user
     if(user == None):
         return render_template('login.html')

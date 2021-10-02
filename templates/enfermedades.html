@@ -5,69 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enfermedades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
     <h1>ENFERMEDADES</h1>
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>EDAD</th>
-                <th>SEXO</th>
-                <th>PESO</th>
-                <th>TALLA</th>
-                <th>SEDENTARIO</th>
-                <th>INSTRUCCION</th>
-                <th>TAS</th>
-                <th>TAD</th>
-                <th>HTA_CONOCIDA</th>
-                <th>HTA_OMS</th>
-                <th>A_DIAB</th>
-                <th>ECV_B</th>
-                <th>TABACO</th>
-                <th>ALCOHOL</th>
-                <th>STATIN</th>
-                <th>CINTURA</th>
-                <th>CADERA</th>
-                <th>OBCENT_ATP</th>
-                <th>COLESTEROL</th>
-                <th>HDL</th>
-                <th>LDL</th>
-                <th>LDL_C</th>
-                <th>TG</th>
-                <th>CNOHDL</th>
-                <th>APOA</th>
-                <th>APOB</th>
-                <th>LPA</th>
-                <th>A1C</th>
-                <th>HBA1</th>
-                <th>CREATININA</th>
-                <th>GLUCB</th>
-                <th>SOG</th>
-                <th>TOL_GLUCOSA</th>
-                <th>DM</th>
-                <th>CONOCIDA</th>
-                <th>SM</th>
-                <th>PCR</th>
-                <th>INSULINEMIA</th>
-                <th>PAI_1</th>
-                <th>FVW</th>
-                <th>FIBRI</th>
-                <th>HMC</th>
-                <th>HOMA</th>
-                <th>IR</th>
-                <th>ECNOS</th>
-                <th>PPR</th>
-                <th>FIBRATOS</th>
-                <th>CETP</th>
-                <th>PON_192</th>
-                <th>HTA_IDF</th>
+                <th scope="col">ID</th>
+                <th scope="col">EDAD</th>
+                <th scope="col">SEXO</th>
+                <th scope="col">PESO</th>
+                <th scope="col">TALLA</th>
+                <th scope="col">SEDENTARIO</th>
+                <th scope="col">INSTRUCCION</th>
+                <th scope="col">TAS</th>
+                <th scope="col">TAD</th>
+                <th scope="col">HTA_CONOCIDA</th>
+                <th scope="col">HTA_OMS</th>
+                <th scope="col">A_DIAB</th>
+                <th scope="col">ECV_B</th>
+                <th scope="col">TABACO</th>
+                <th scope="col">ALCOHOL</th>
+                <th scope="col">STATIN</th>
+                <th scope="col">CINTURA</th>
+                <th scope="col">CADERA</th>
+                <th scope="col">OBCENT_ATP</th>
+                <th scope="col">COLESTEROL</th>
+                <th scope="col">HDL</th>
+                <th scope="col">LDL</th>
+                <th scope="col">LDL_C</th>
+                <th scope="col">TG</th>
+                <th scope="col">CNOHDL</th>
+                <th scope="col">APOA</th>
+                <th scope="col">APOB</th>
+                <th scope="col">LPA</th>
+                <th scope="col">A1C</th>
+                <th scope="col">HBA1</th>
+                <th scope="col">CREATININA</th>
+                <th scope="col">GLUCB</th>
+                <th scope="col">SOG</th>
+                <th scope="col">TOL_GLUCOSA</th>
+                <th scope="col">DM</th>
+                <th scope="col">CONOCIDA</th>
+                <th scope="col">SM</th>
+                <th scope="col">PCR</th>
+                <th scope="col">INSULINEMIA</th>
+                <th scope="col">PAI_1</th>
+                <th scope="col">FVW</th>
+                <th scope="col">FIBRI</th>
+                <th scope="col">HMC</th>
+                <th scope="col">HOMA</th>
+                <th scope="col">IR</th>
+                <th scope="col">ECNOS</th>
+                <th scope="col">PPR</th>
+                <th scope="col">FIBRATOS</th>
+                <th scope="col">CETP</th>
+                <th scope="col">PON_192</th>
+                <th scope="col">HTA_IDF</th>
             </tr>
         </thead>
         <tbody>
             {% for enfermedad in enfermadades %}
                 <tr>
-                    <td>{{ enfermedad[0] }}</td>
+                    <th scope="row">{{ enfermedad[0] }}</th>
                     <td>{{ enfermedad[1] }}</td>
                     <td>{{ enfermedad[2] }}</td>
                     <td>{{ enfermedad[3] }}</td>
